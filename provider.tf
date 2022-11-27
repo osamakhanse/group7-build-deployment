@@ -10,7 +10,7 @@ resource "aws_instance" "example" {
   connection {
     type        = "ssh"
     user        = "ec2-user"
-    private_key = file("~/.ssh/x21242887_jenkins.pem")
+    private_key = file("x21242887-jenkins.pem")
     host        = self.public_ip
   }
 
