@@ -2,16 +2,13 @@ provider "aws" {
   region  = "eu-west-1"
 }
 
-resource "aws_instance" "example" {
-  key_name      = "x21242887-jenkins"
-  ami           = "ami-096800910c1b781ba"
-  instance_type = "t2.micro"
+resource "null_resource" "name" {
 
   connection {
     type        = "ssh"
     user        = "ec2-user"
     private_key = file("x21242887-jenkins.pem")
-    host        = self.public_ip
+    host        = "ec2-34-242-102-85.eu-west-1.compute.amazonaws.com"
   }
 
   provisioner "remote-exec" {
