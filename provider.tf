@@ -10,7 +10,7 @@ resource "aws_instance" "example" {
   connection {
     type        = "ssh"
     user        = "ec2-user"
-    private_key = file("~/")
+    private_key = file(pathexpand("~/.ssh/authorized_keys"))
     host        = self.public_ip
   }
 
