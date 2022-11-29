@@ -10,10 +10,9 @@ resource "null_resource" "name" {
     private_key = file("x21242887-jenkins.pem")
     host        = "ec2-54-229-142-121.eu-west-1.compute.amazonaws.com"
   }
-
   provisioner "remote-exec" {
     inline = [
-            "mkdir django-apps"
+            "mkdir testDir"
     ]
   }
 }
