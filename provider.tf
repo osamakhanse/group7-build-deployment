@@ -12,7 +12,7 @@ resource "null_resource" "name" {
   }
   provisioner "remote-exec" {
     inline = [
-            "mkdir testDir"
+            "sudo mkdir testDir"
     ]
   }
 }
