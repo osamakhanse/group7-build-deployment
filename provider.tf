@@ -25,7 +25,7 @@ resource "null_resource" "name" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo mkdir appsteam7-2"
+      "sudo mkdir appsteam7-3"
     ]
   }
 }
