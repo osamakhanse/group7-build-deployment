@@ -7,7 +7,7 @@ resource "null_resource" "name" {
     type        = "ssh"
     user        = "ubuntu"
     private_key = file("x21242887-jenkins.pem")
-    host        = "ec2-34-244-92-217.eu-west-1.compute.amazonaws.com"
+    host        = "ec2-63-35-237-106.eu-west-1.compute.amazonaws.com"
   }
 
   provisioner "remote-exec" {
@@ -25,7 +25,7 @@ resource "null_resource" "name" {
       type        = "ssh"
       user        = "ubuntu"
       private_key = file("x21242887-jenkins.pem")
-      host        = "ec2-34-244-92-217.eu-west-1.compute.amazonaws.com"
+      host        = "ec2-63-35-237-106.eu-west-1.compute.amazonaws.com"
 
     }
     
