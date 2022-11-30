@@ -12,6 +12,7 @@ resource "null_resource" "name" {
 
   provisioner "remote-exec" {
     inline = [
+      "sudo systemctl stop aoedjango",
       "sudo rm -r AOE"
     ]
   }
@@ -39,7 +40,7 @@ resource "null_resource" "name" {
       "pip install django==4.1.3",
       "python3 manage.py makemigrations",
       "python3 manage.py migrate",
-      "python3 manage.py runserver 0.0.0.0:8000"
+      "sudo systemctl start aoedjango"
     ]
   }
   
