@@ -13,12 +13,20 @@ resource "null_resource" "name" {
       host        = "ec2-34-244-92-217.eu-west-1.compute.amazonaws.com"
 
     }
- }
+    
+  }
+  
+  connection {
+    type        = "ssh"
+    user        = "ubuntu"
+    private_key = file("x21242887-jenkins.pem")
+    host        = "ec2-34-244-92-217.eu-west-1.compute.amazonaws.com"
+  }
 
   provisioner "remote-exec" {
-      inline = [
-        "sudo mkdir appsteam7-2"
-      ]
-   }
- }
+    inline = [
+      "sudo mkdir appsteam7-2"
+    ]
+  }
+}
 
