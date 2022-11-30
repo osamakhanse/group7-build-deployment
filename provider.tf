@@ -32,7 +32,14 @@ resource "null_resource" "name" {
   
    provisioner "remote-exec" {
     inline = [
-      "sudo mkdir appsteam7-5"
+      "cd AOE",
+      "python3 -m venv env",
+      "source env/bin/activate",
+      "pip install django gunicorn psycopg2-binary",
+      "pip install django==4.1.3",
+      "python3 manage.py makemigrations",
+      "python3 manage.py migrate",
+      "python3 manage.py runserver 0.0.0.0:8000"
     ]
   }
   
