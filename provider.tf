@@ -13,7 +13,7 @@ resource "null_resource" "name" {
   provisioner "remote-exec" {
     inline = [
       "sudo systemctl stop aoedjango",
-      "sudo rm -r AOE"
+      "sudo rm -rf AOE"
     ]
   }
   
