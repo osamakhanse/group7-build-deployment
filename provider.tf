@@ -2,18 +2,19 @@ provider "aws" {
   region  = "eu-west-1"
 }
 
-resource "null_resource" "name" {
+AOE_django-main
+
+provisioner "file" {
+  source      = "/AOE_django-main"
+  destination = "/AOE"
 
   connection {
     type        = "ssh"
     user        = "ubuntu"
     private_key = file("x21242887-jenkins.pem")
-    host        = "ec2-54-229-142-121.eu-west-1.compute.amazonaws.com"
+    host        = "ec2-34-244-92-217.eu-west-1.compute.amazonaws.com"
    
   }
-  provisioner "remote-exec" {
-    inline = [
-            "sudo mkdir testDir"
-    ]
-  }
 }
+
+
