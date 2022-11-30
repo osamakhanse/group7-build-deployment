@@ -12,7 +12,7 @@ resource "null_resource" "name" {
 
   provisioner "remote-exec" {
     inline = [
-      "suro rm -r AOE"
+      "sudo rm -r AOE"
     ]
   }
   
