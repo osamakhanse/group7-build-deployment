@@ -2,8 +2,6 @@ provider "aws" {
   region  = "eu-west-1"
 }
 
-AOE_django-main
-
 provisioner "file" {
   source      = "/AOE_django-main"
   destination = "/AOE"
