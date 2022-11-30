@@ -40,7 +40,8 @@ resource "null_resource" "name" {
       "pip install django==4.1.3",
       "python3 manage.py makemigrations",
       "python3 manage.py migrate",
-      "sudo systemctl start aoedjango"
+      "sudo systemctl start aoedjango",
+      "sudo systemctl enable aoedjango"
     ]
   }
   
