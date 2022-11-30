@@ -3,8 +3,8 @@ provider "aws" {
 }
 resource "null_resource" "name" {
   provisioner "file" {
-    source      = "/AOE_django-main"
-    destination = "/AOE"
+    source      = "AOE_django-main"
+    destination = "AOE"
 
     connection {
       type        = "ssh"
