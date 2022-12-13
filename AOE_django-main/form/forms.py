@@ -17,12 +17,8 @@ class UserForm(ModelForm):
 
     def clean(self):
         super(UserForm, self).clean()
-        print('I LOVE JENNI')
-        first_name = self.cleaned_data.get('first_name')
-        last_name = self.cleaned_data.get('last_name')
         email = self.cleaned_data.get('email')
         phone = self.cleaned_data.get('phone')
-        date = self.cleaned_data.get('date')
 
         email_regexp = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
         phone_regexp = re.compile(r'|^\s*\(?\s*\d{1,4}\s*\)?\s*[\d\s]{5,10}\s*$|')
